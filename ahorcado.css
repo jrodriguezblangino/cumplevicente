@@ -1,0 +1,179 @@
+body {
+    background-color: #e0f7fa;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    color: #00796b;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    animation: fadeIn 0.5s;
+}
+
+h2 {
+    color: #004d40;
+    font-size: 2em;
+}
+
+#game {
+    margin-top: 20px;
+}
+
+#wordDisplay {
+    font-size: 2em;
+    letter-spacing: 10px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #00796b;
+    border-radius: 5px;
+    width: 50%;
+    max-width: 300px;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #00796b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #004d40;
+}
+
+#message {
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #d32f2f;
+}
+
+#hangmanCanvas {
+    margin-top: 20px;
+    border: 1px solid #00796b;
+}
+
+#timerContainer {
+    margin-top: 20px;
+}
+
+#timer {
+    font-size: 2em;
+    background-color: #000;
+    color: #0f0;
+    padding: 10px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+#playAgainButton {
+    margin-top: 10px;
+    display: none;
+    background-color: #00796b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#playAgainButton:hover {
+    background-color: #004d40;
+    transform: scale(1.05);
+}
+
+#whatsappLogo {
+    display: block;
+    margin: 20px auto;
+}
+
+.wait-message {
+    margin-top: 20px;
+    font-size: 1.5em;
+    color: #d32f2f;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid #d32f2f;
+    border-radius: 5px;
+    padding: 10px;
+    animation: fadeIn 0.5s, bounce 0.5s infinite alternate;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes bounce {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-10px);
+    }
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    #wordDisplay {
+        font-size: 1.5em;
+    }
+
+    input[type="text"] {
+        width: 80%;
+        margin-bottom: 15px;
+    }
+
+    button {
+        font-size: 0.9em;
+    }
+
+    #timer {
+        font-size: 1.5em;
+    }
+
+    .wait-message {
+        font-size: 1.2em;
+    }
+}
+
+.letter {
+    display: inline-block;
+    opacity: 0;
+    animation: fadeIn 0.5s forwards;
+}
+
+.error-animation {
+    color: #d32f2f;
+    animation: shake 0.5s;
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}

@@ -1,0 +1,137 @@
+body {
+    background-color: #f0f4f8;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    color: #00796b;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #004d40; /* Color del subtítulo */
+    font-size: 2em;
+}
+
+#quiz {
+    background-color: #ffffff; /* Fondo blanco para el cuestionario */
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 600px; /* Ancho máximo */
+    margin-bottom: 40px;
+}
+
+#question {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #00796b;
+    border-radius: 5px;
+    width: 50%;
+    max-width: 300px; /* Ancho máximo */
+    margin-bottom: 20px;
+}
+
+input[type="text"]:focus {
+    border-color: #004d40; /* Color del borde al enfocar */
+    outline: none; /* Sin contorno */
+}
+
+button {
+    background-color: #00796b; /* Color del botón */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #004d40; /* Color del botón al pasar el mouse */
+    transform: scale(1.05); /* Efecto de aumento al pasar el mouse */
+}
+
+#feedback {
+    margin-top: 10px;
+    color: #d32f2f; /* Color del feedback */
+    font-weight: bold;
+}
+
+#game {
+    margin-top: 20px;
+    display: none; /* Ocultar el juego inicialmente */
+}
+
+#minesweeper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#grid {
+    display: grid;
+    grid-template-columns: repeat(10, 40px); /* 10 columnas */
+    grid-template-rows: repeat(10, 40px); /* 10 filas */
+    gap: 2px;
+}
+
+.cell {
+    width: 40px;
+    height: 40px;
+    background-color: #e0e0e0;
+    border: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+.cell.revealed {
+    background-color: #ffffff;
+    cursor: default;
+}
+
+.cell.mine {
+    background-color: #ff5252; /* Color para las minas */
+}
+
+#message {
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #d32f2f; /* Color del mensaje */
+}
+
+#imageGallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.gallery-image {
+    width: 100%; /* Ajustar el tamaño de las imágenes al contenedor */
+    max-width: 300px; /* Ancho máximo para las imágenes */
+    height: auto; /* Mantener la proporción de la imagen */
+    margin: 10px; /* Espacio entre imágenes */
+    border-radius: 10px;
+    transition: transform 0.3s;
+    object-fit: cover; /* Asegurar que la imagen no se distorsione */
+}
+
+.gallery-image:hover {
+    transform: scale(1.05); /* Efecto de aumento al pasar el mouse */
+}

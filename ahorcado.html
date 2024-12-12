@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego del Ahorcado</title>
+    <link rel="stylesheet" href="./ahorcado.css">
+</head>
+<body>
+    <h1>¡Juego del Ahorcado!</h1>
+    <div id="game">
+        <h3 id="wordDisplay"></h3>
+        <input type="text" id="letterInput" maxlength="1" placeholder="Ingresa una letra">
+        <button id="guessButton">Adivinar</button>
+        <div id="message"></div>
+        <div id="errorLetters">Letras incorrectas: <span id="errorList"></span></div>
+        <button id="restart" style="display: none;">Reiniciar Juego</button>
+        <canvas id="hangmanCanvas" width="200" height="200"></canvas>
+        <div id="timerContainer" style="display: none;">
+            <div id="timer">Tiempo restante: <span id="time">300</span> segundos</div>
+            <button id="playAgainButton" style="display: none;">Volver a Jugar</button>
+            <div id="waitMessage" style="display: none;" class="wait-message">Debes esperar hasta que el reloj llegue a cero para volver a jugar.</div>
+        </div>
+        <div style="text-align: center;">
+            <img id="whatsappLogo" src="./icons8-whatsapp.svg" alt="WhatsApp" style="display: none; cursor: pointer; margin-top: 20px;" onclick="sendWhatsAppMessage()">
+        </div>
+    </div>
+    <script src="./ahorcado.js"></script>
+</body>
+</html> 
